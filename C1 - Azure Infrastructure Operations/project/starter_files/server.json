@@ -1,18 +1,39 @@
 {
-	"variables": {
-		"client_id": "{{env `ARM_CLIENT_ID`}}",
-		"client_secret": "{{env `ARM_CLIENT_SECRET`}}",
-		"subscription_id": "{{env `ARM_SUBSCRIPTION_ID`}}"
+    "variables": {
+      "client_id": "{{env `ARM_CLIENT_ID`}}",
+      "client_secret": "{{env `ARM_CLIENT_SECRET`}}",
+      "subscription_id": "{{env `ARM_SUBSCRIPTION_ID`}}"
 	},
-	"builders": [{
-		**YOUR CODE HERE**
-	}],
-	"provisioners": [{
-		"inline": [
-			"echo 'Hello, World!' > index.html",
-			"nohup busybox httpd -f -p 80 &"
-		],
-		"inline_shebang": "/bin/sh -x",
-		"type": "shell"
-	}]
+    "builders": [{
+      "type": "azure-arm",
+  
+      "client_id": "7512e98f-ed15-4546-9718-999ea490fee4",
+      "client_secret": "Q4I8Q~.np~7LG.UKyQEW29pKYkVCQDrxxMs6JadH",
+      "tenant_id": "20a16847-e237-4105-8bc5-ff265e35a748",
+      "subscription_id": "cd76ddea-1764-45da-9592-9479ad9ec051",
+  
+      "managed_image_resource_group_name": "packer-project1",
+      "managed_image_name": "UbuntuServer-Udacity",
+  
+      "os_type": "Linux",
+      "image_publisher": "Canonical",
+      "image_offer": "UbuntuServer",
+      "image_sku": "18.04-LTS",
+  
+      "azure_tags": {
+          "CreatedByMe": "Nosa Obamwonyi",
+          "task": "Image deployment with Packer"
+      },
+
+      "location": "West Europe",
+      "vm_size": "Standard_DS2_v2"
+  }],
+  "provisioners": [{
+    "inline": [
+      "echo 'Hello, World!' > index.html",
+      "nohup busybox httpd -f -p 80 &"
+    ],
+    "inline_shebang": "/bin/sh -x",
+    "type": "shell"
+  }]
 }
