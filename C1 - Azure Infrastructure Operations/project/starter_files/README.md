@@ -40,5 +40,7 @@ Outputs:
 id = "/subscriptions/cd76ddea-1764-45da-9592-9479ad9ec051/resourceGroups/packer-project1"
 image_id = "/subscriptions/cd76ddea-1764-45da-9592-9479ad9ec051/resourceGroups/packer-project1/providers/Microsoft.Compute/images/UbuntuServer-Udacity"
 root@DESKTOP-ND8EM2D:~/udacity#
+![image](https://user-images.githubusercontent.com/54482726/184457389-fc915014-0f77-4175-81d4-402242a5d94b.png)
+
 
 Note: your output might be a little different from what we have here!
